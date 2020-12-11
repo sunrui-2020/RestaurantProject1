@@ -1,0 +1,45 @@
+﻿@page
+@model RestaurantProject.Pages.Staffs.ViewModel
+@{
+}
+<h1>:: View Student Record ::</h1>
+
+<div>
+    <div>
+        <table class="table">
+            <tr>
+                <th>StaffId</th>
+                <th>First name</th>
+                <th>Lastname</th>
+                <th>Sex</th>
+                <th>STAFF Email</th>
+                <th>STAFF NATIONALITY</th>
+                <th>STAFFpassword</th>
+
+
+            </tr>
+
+            @for (int i = 0; i < Model.RestaurantProject.Count; i++)
+            {
+                <tr>
+                    <td>@(i+1)</td>
+                    <td>@Model.RestaurantProject[i].StaffID</td>
+                    <td>@Model.RestaurantProject[i].StaffFname</td>
+                    <td>@Model.RestaurantProject[i].StaffLname</td>
+                    <td>@Model.RestaurantProject[i].StaffSex</td>
+                    <td>@Model.RestaurantProject[i].StaffEmail</td>
+                    <td>@Model.RestaurantProject[i].Stafftype</td>
+                    <td>@Model.RestaurantProject[i].Staffnationality</td>
+                    <td>@Model.RestaurantProject[i].Staffpassword</td>
+                    <td>
+                        <a asp-page="/Staffs/Update" asp-route-id="@Model.RestaurantProject[i].Id">Update </a>
+                        <a asp-page="/Staffs/Delete" asp-route-id="@Model.RestaurantProject[i].Id">Delete</a>
+
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

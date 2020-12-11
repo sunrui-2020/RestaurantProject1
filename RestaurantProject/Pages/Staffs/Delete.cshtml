@@ -1,0 +1,67 @@
+﻿@page
+@model RestaurantProject.Pages.Staffs.DeleteModel
+@{
+}
+<h1>Delete</h1>
+
+<h2 class="text-danger">Are you sure want to delete the record?</h2>
+
+<div class="table-active">
+
+    <div>
+        <label asp-for="Staffs.StaffID"></label>
+        <span> : </span>
+        @Model.Staffs.StaffID 
+    </div>
+
+    <div>
+        <label asp-for="Staffs.StaffFname"></label>
+        <span> : </span>
+        @Model.Staffs.StaffFname
+    </div>
+
+    <div>
+        <label asp-for="Staffs.StaffLname"></label>
+        <span> : </span>
+        @Model.Staffs.StaffLname
+    </div>
+
+    <div>
+        <label asp-for="Staffs.StaffSex"></label>
+        <span> : </span>
+        @Model.Staffs.StaffSex
+    </div>
+
+    <div>
+        <label asp-for="Staffs.StaffEmail"></label>
+        <span> : </span>
+        @Model.Staffs.StaffEmail
+    </div>
+
+    <div>
+        <label asp-for="Staffs.Stafftype"></label>
+        <span> : </span>
+        @Model.Staffs.Stafftype
+    </div>
+
+    <div>
+        <label asp-for="Staffs.Staffnationality"></label>
+        <span> : </span>
+        @Model.Staffs.Staffnationality
+    </div>
+    <div>
+        <label asp-for="Staffs.Staffpassword"></label>
+        <span> : </span>
+        @Model.Staffs.Staffpassword
+    </div>
+
+</div>
+<br />
+<div>
+    <form method="post">
+        <input type="hidden" asp-for="Staffs.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+    </form>
+</div>
+
+

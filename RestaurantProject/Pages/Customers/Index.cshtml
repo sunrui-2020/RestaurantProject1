@@ -1,0 +1,72 @@
+﻿@page
+@model RestaurantProject.Pages.Customers.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].CustomerID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].CustomerFname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].CustomerLname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].CustomerSex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].CustomerEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].Customerphone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].CustomerPwd)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Customer) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerFname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerLname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerSex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customerphone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerPwd)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

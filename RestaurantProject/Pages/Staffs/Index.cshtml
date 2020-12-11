@@ -1,0 +1,57 @@
+﻿@page
+@model RestaurantProject.Pages.Staffs.IndexModel
+@{
+}
+<h1> staff information system </h1>
+
+<br />
+<div>
+    <div class="col-md-4">
+        <form method="post">
+            <div class="form-group">
+                <label class="control-label">Staff ID</label>
+                <input type="text" asp-for="Staffs.StaffID" class="form-control" />
+            </div>
+            <br />
+            <div>
+                <label class="control-label">First name</label>
+                <input type="text" asp-for="Staffs.StaffFname" class="form-control" />
+            </div>
+            <br />
+            <div>
+                <label class="control-label">Last name</label>
+                <input type="text" asp-for="Staffs.StaffLname" class="form-control" />
+            </div>
+            <br />
+            <div>
+                <label class="control-label">Sex</label>
+                <input type="text" asp-for="Staffs.StaffSex" class="form-control" />
+            </div>
+            <br />
+            <div>
+                <label class="control-label">Email</label>
+                <input type="text" asp-for="Staffs.StaffEmail" class="form-control" />
+            </div>
+            <br />
+            <div>
+                <label class="control-label">job type</label>
+                <input type="text" asp-for="Staffs.Stafftype" class="form-control" />
+            </div>
+            <br />
+            <div>
+                <label class="control-label">Nationality</label>
+                <input type="text" asp-for="Staffs.Staffnationality" class="form-control" />
+            </div>
+            <br />
+            <div>
+                <label class="control-label">staff password</label>
+                <input type="text" asp-for="Staffs.Staffpassword" class="form-control" />
+            </div>
+            <br />
+            <div>
+                <input type="submit" value="Create" class="btn btn-secondary" />
+            </div>
+
+        </form>
+    </div>
+</div>

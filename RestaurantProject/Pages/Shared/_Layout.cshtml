@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Papa Luigi's</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body style="background-color: limegreen;">
+    <header style="background-color: red; width:100%;">
+        <nav style="background-color: red;" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-red border-bottom box-shadow mb-3">
+            <div style="background-color: red;" class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">
+                    <img style="width:178px; height:69px" src="https://papaluigiscudahy.com/wp-content/uploads/2020/02/PapaLuigisLogo.png" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div style="padding-left: 600px; background-color: red;" class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-page="/Customers/Create">
+                                <button style="background-color:white; color:black" type="button" class="btn">Register</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="background-color: red;">
+                    <ul style="padding-left: 15px;" class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <p style="padding-top:25px" class="nav-link text-white">Login</p>
+                        </li>
+                    </ul>
+                </div>
+                <div style="background-color: red;">
+                    <ul style="padding-left: 15px;" class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <input type="text" placeholder="Username" />
+                        </li>
+                    </ul>
+                </div>
+                <div style="background-color: red;">
+                    <ul style="padding-left: 15px;" class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <input type="password" placeholder="Password" />
+                        </li>
+                    </ul>
+                </div>
+                <div style="background-color: red;">
+                    <ul style="padding-left: 15px;" class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-page="/StaffsLogin/login">
+                                <button style="background-color:white; color:black" type="button" class="btn">Submit</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - Papa Luigi's - <a asp-area="" asp-page="/Index">Home</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+
